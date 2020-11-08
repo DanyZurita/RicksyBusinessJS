@@ -25,7 +25,7 @@
 
 
 var creditCards = [
-    { id: 001, name: "Abradolph Lincler", numberCard: "4916119711304546" }, //posibilidad de añadir credit
+    { id: 001, name: "Abradolph Lincler", numberCard: "4916119711304546" },
     { id: 002, name: "Squanchy", numberCard: "4444444444444444" },
     { id: 003, name: "Morty", numberCard: "0000000000000000" },
     { id: 004, name: "GearHead", numberCard: "8888888888888888" },
@@ -38,8 +38,7 @@ var creditCards = [
 function getOwnerCard(creditCardId) {
     for (let creditCard of creditCards) {
         if (creditCard.id == creditCardId) {
-            let name = creditCard.name;
-            return name;
+            return creditCard.name;
         }
     }
 }
@@ -47,8 +46,7 @@ function getOwnerCard(creditCardId) {
 function getNumberCard(creditCardId) {
     for (let creditCard of creditCards) {
         if (creditCard.id == creditCardId) {
-            let number = creditCard.numberCard;
-            return number;
+            return creditCard.numberCard;
         }
     }
 }
@@ -135,51 +133,42 @@ console.log("Stock: " + stock);
 console.log("Cost: " + costPack);
 console.log("Credit of GearHead: " + "0.0");
 
+//Console.log de stats
+
+function printStats(owner, name, ezi, pack, ovnis) {
+    console.log("Owner: " + owner);
+    console.log("Number: " + name);
+    console.log("Credit: " + ezi +" EZI" + "\n");
+    console.log("Packs: " + pack);
+    console.log("Ovnis: " + ovnis);
+}
 
 //LLega Squanchy!
 
-var numberCreditCardSquanchy = getNumberCard(002);
-var costSquanchy = cost - 50;
-var pack = 1;
+let numberCreditCardSquanchy = getNumberCard(002);
+let costSquanchy = cost - 50;
+let pack = 1;
 console.log("##########" + " Arrive " + ownerCreditCardSquanchy + "! ##########" + "\n");
-console.log("Owner: " + ownerCreditCardSquanchy);
-console.log("Number: " + numberCreditCardSquanchy);
-console.log("Credit: " + costSquanchy + "EZI" + "\n");
-console.log("Packs: " + pack);
-console.log("Ovnis: " + null);
-
+printStats(ownerCreditCardSquanchy, numberCreditCardSquanchy, costSquanchy, pack, null);
 
 //LLega GearHead!
 
-var ownerCreditGearHead = getOwnerCard(004);
-var nameCreditGearHead = getNumberCard(004);
+let ownerCreditGearHead = getOwnerCard(004);
+let nameCreditGearHead = getNumberCard(004);
 console.log("##########" + " Arrive " + ownerCreditGearHead + "! ##########" + "\n");
-console.log("Owner: " + ownerCreditGearHead);
-console.log("Number: " + nameCreditGearHead);
-console.log("Credit: 0.0 EZI" + "\n");
-console.log("Packs: " + pack);
-console.log("Ovnis: " + null);
+printStats(ownerCreditGearHead, nameCreditGearHead, 0, 0, null);
 
 //LLega Birdpearson!
 
 
-var ownerCreditBirdPerson = getOwnerCard(005);
-var nameCreditBirdPerson = getNumberCard(005);
+let ownerCreditBirdPerson = getOwnerCard(005);
+let nameCreditBirdPerson = getNumberCard(005);
 console.log("##########" + " Arrive " + ownerCreditBirdPerson + "! ##########" + "\n");
-console.log("Owner: " + ownerCreditBirdPerson);
-console.log("Number: " + nameCreditBirdPerson);
-console.log("Credit: 2950.0 EZI" + "\n");
-console.log("Packs: " + "0");
-console.log("Ovnis: " + null);
-
+printStats(ownerCreditBirdPerson, nameCreditBirdPerson, 2950, 0, null);
 
 //Morty quiere pack y ovni pero no quedan :(
 
-var ownerCreditMorty = getOwnerCard(003);
-var nameCreditMorty = getNumberCard(003);
+let ownerCreditMorty = getOwnerCard(003);
+let nameCreditMorty = getNumberCard(003);
 console.log("########## " + ownerCreditMorty + " wants pack but 0 stock" + " ##########" + "\n");
-console.log("Owner: " + ownerCreditMorty);
-console.log("Number: " + nameCreditMorty);
-console.log("Credit: 3000.0 EZI" + "\n");
-console.log("Packs: " + "0");
-console.log("Ovnis: " + null);
+printStats(ownerCreditMorty, nameCreditMorty, 3000, 0, null);
