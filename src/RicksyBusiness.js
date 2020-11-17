@@ -197,6 +197,8 @@ main();
 
 */
 import CreditCard from './CreditCard.js';
+import UfosPark from './UfosPark.js';
+import Ufo from './Ufo.js';
 
 let danyCredit = new CreditCard("Dany", 123);
 let mateuCredit = new CreditCard("Mateu", 1);
@@ -210,3 +212,16 @@ console.log(danyCredit);
 mateuCredit.pay(999);
 
 console.log(mateuCredit);
+
+let ufosPark = new UfosPark();
+
+let ufo1 =  new Ufo("Ufo1");
+let ufo2 =  new Ufo("Ufo2");
+let ufo3 =  new Ufo("Ufo3");
+
+ufosPark.add(ufo1);
+ufosPark.add(ufo2);
+ufosPark.add(ufo3);
+
+
+console.log(ufosPark);
