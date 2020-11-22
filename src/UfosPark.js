@@ -49,20 +49,21 @@ UfosPark.prototype.isOwnerAlreadyServed = function(creditCard) {
 }
 
 //Singleton Pattern
-function singleOvni() {
-    var ufosParkInstance;
-    return {
-      getUfo: function getUfo() {
-        if (!ufosParkInstance) {
-            ufosParkInstance = new UfosPark();
-        }
-        return ufosParkInstance;
-      },
-    };
-  }
 
-const singletonUfosPark = function () {
-    return singleOvni();
-};
+
+const singletonUfosPark = (function () {
+        var ufosParkInstance;
+        function createInstance() {
+            return new UfosPark()
+        }
+        return {
+          getUfo: function() {
+            if (!ufosParkInstance) {
+                ufosParkInstance = createInstance();
+            }
+            return ufosParkInstance;
+          },
+        };
+      })();
 
 module.exports = singletonUfosPark;
