@@ -1,29 +1,68 @@
-import Ufo from './Ufo.js';
 
+//Constructor
 function UfosPark() {
 
-    this.flota = {Ufo};
+    this.fleet = new Map();
     this.fee = 500;
 
 }
 
-UfosPark.prototype.add = function(ufo) {
-    this.flota.push(ufo);
+//Add a new Ufo
+UfosPark.prototype.addUfo = function(ufo) {
+    this.fleet.set(ufo, null);
 }
 
-
+//Find the Ufo of a guest
 UfosPark.prototype.getUfoOf = function(owner) {
-    return this.flota.includes(owner) ? this.flota[this.flota.indexOf(owner)] : null;
+    for (let [k, v] of this.fleet.entries()) {
+        if (owner == v) {
+            return k;
+        }
+      }
+    return "nope";
 }
 
-UfosPark.prototype.dispatcheable = function(creditCard) {
-    for ( Ufo.prototype in this.flota){
-        if (ufo.guest == null){
-            // TODO logica pocha
-            return creditCard;
-            
+//Main process to dispatch a Ufo
+UfosPark.prototype.dispatch = function(creditCard) {
+    for (let [k, v] of this.fleet.entries()) {
+        if(this.isUfoDispacheable(v, creditCard)) {
+            this.payDispatch(k, creditCard);
+            break;
         }
     }
 }
 
-export default UfosPark;
+//Check all 3 conditions
+UfosPark.prototype.isUfoDispacheable = function(v, creditCard) {
+    return !this.isOwnerAlreadyServed(creditCard) && v == null && creditCard.isPayable(this.fee);
+}
+
+//Process the payment of the Ufo
+UfosPark.prototype.payDispatch = function(k, creditCard) {
+    creditCard.pay(this.fee);
+    this.fleet.set(k, creditCard.number)
+}
+
+//Check if owner already is dispatched
+UfosPark.prototype.isOwnerAlreadyServed = function(creditCard) {
+    return Array.from(this.fleet.values()).includes(creditCard.number, 0);
+}
+
+//Singleton Pattern
+function singleOvni() {
+    var ufosParkInstance;
+    return {
+      getUfo: function getUfo() {
+        if (!ufosParkInstance) {
+            ufosParkInstance = new UfosPark();
+        }
+        return ufosParkInstance;
+      },
+    };
+  }
+
+const singletonUfosPark = function () {
+    return singleOvni();
+};
+
+export default singletonUfosPark;
