@@ -8,11 +8,14 @@ function CreditCard(owner, number) {
 }
 
 CreditCard.prototype.pay = function(fee) {
-    if (this.credit > 0 && this.credit > fee) {
+    if (this.isPayable(fee)) {
         this.credit -= fee;
     }
 }
 
+CreditCard.prototype.isPayable = function(fee) {
+    return this.credit > 0 && this.credit > fee;
+}
 
 
 export default CreditCard;
