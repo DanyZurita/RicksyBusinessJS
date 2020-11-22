@@ -196,8 +196,8 @@ function main() {
 main();
 
 */
-import CreditCard from './CreditCard.js';
-import singletonUfosPark from './UfosPark.js';
+const CreditCard = require('./CreditCard.js');
+const singletonUfosPark = require('./UfosPark.js');
 
 let danyCredit = new CreditCard("Dany", 123);
 let mateuCredit = new CreditCard("Mateu", 1);

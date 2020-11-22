@@ -65,4 +65,4 @@ const singletonUfosPark = function () {
     return singleOvni();
 };
 
-export default singletonUfosPark;
+module.exports = singletonUfosPark;
