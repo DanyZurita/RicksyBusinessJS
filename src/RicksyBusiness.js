@@ -198,6 +198,8 @@ main();
 */
 const CreditCard = require('./CreditCard.js');
 const singletonUfosPark = require('./UfosPark.js');
+const crystalExpender = require('./CrystalExpender.js');
+const CrystalExpender = require('./CrystalExpender.js');
 
 let danyCredit = new CreditCard("Dany", 123);
 let mateuCredit = new CreditCard("Mateu", 1);
@@ -245,3 +247,11 @@ console.log(mateuCredit);
 let ufoMM = ufosPark.getUfoOf(mateuCredit.number);
 console.log(ufoMM)
 console.log(mateuCredit);
+
+let crystal = new CrystalExpender(10, 50);
+
+console.log(danyCredit);
+
+crystal.dispatch(danyCredit);
+
+console.log(danyCredit);
