@@ -218,7 +218,7 @@ mateuCredit.pay(999);
 
 console.log(mateuCredit);
 
-let ufosPark = singletonUfosPark().getUfo();
+let ufosPark = singletonUfosPark.getUfo();
 
 ufosPark.addUfo("Ufo1");
 ufosPark.addUfo("Ufo2");
