@@ -197,8 +197,7 @@ main();
 
 */
 import CreditCard from './CreditCard.js';
-import UfosPark from './UfosPark.js';
-import Ufo from './Ufo.js';
+import singletonUfosPark from './UfosPark.js';
 
 let danyCredit = new CreditCard("Dany", 123);
 let mateuCredit = new CreditCard("Mateu", 1);
@@ -209,19 +208,40 @@ danyCredit.pay(1000);
 
 console.log(danyCredit);
 
+danyCredit.pay(10000);
+
+console.log(danyCredit);
+
 mateuCredit.pay(999);
 
 console.log(mateuCredit);
 
-let ufosPark = new UfosPark();
+let ufosPark = singletonUfosPark().getUfo();
 
-let ufo1 =  new Ufo("Ufo1");
-let ufo2 =  new Ufo("Ufo2");
-let ufo3 =  new Ufo("Ufo3");
-
-ufosPark.add(ufo1);
-ufosPark.add(ufo2);
-ufosPark.add(ufo3);
+ufosPark.addUfo("Ufo1");
+ufosPark.addUfo("Ufo2");
+ufosPark.addUfo("Ufo3");
 
 
 console.log(ufosPark);
+
+ufosPark.dispatch(danyCredit)
+console.log(ufosPark.fleet);
+
+let ufoDany = ufosPark.getUfoOf(danyCredit.number);
+console.log(ufoDany)
+
+ufosPark.dispatch(mateuCredit)
+console.log(ufosPark.fleet);
+
+
+let ufoM = ufosPark.getUfoOf(mateuCredit.number);
+console.log(ufoM)
+
+ufosPark.dispatch(mateuCredit)
+console.log(ufosPark.fleet);
+console.log(mateuCredit);
+
+let ufoMM = ufosPark.getUfoOf(mateuCredit.number);
+console.log(ufoMM)
+console.log(mateuCredit);
