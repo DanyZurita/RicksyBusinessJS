@@ -14,8 +14,8 @@ CreditCard.prototype.pay = function(fee) {
 }
 
 CreditCard.prototype.isPayable = function(fee) {
-    return this.credit > 0 && this.credit > fee;
+    return this.credit > 0 && this.credit >= fee;
 }
 
 
-export default CreditCard;
+module.exports = CreditCard;
