@@ -10,3 +10,10 @@ test('Pay 1 Crsytal', () => {
     crystal.dispatch(danyCredit);
     expect(danyCredit.credit).toBe(2950);
 });
+
+test('Pay only 10 Crsytal', () => {
+    for (let i = 0; i < 20; i++) {
+        crystal.dispatch(danyCredit);
+    }
+    expect(danyCredit.credit).toBe(2500);
+});
