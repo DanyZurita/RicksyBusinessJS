@@ -1,9 +1,28 @@
 {
+    "name": "ricksybusinessjs",
+    "description": "RicksyBusiness en JavaScript",
+    "version": "1.0.0",
+    "main": "RicksyBusiness.js",
+    "directories": {
+        "test": "test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/DanyZurita/RicksyBusinessJS.git"
+    },
+    "keywords": [
+        "JS"
+    ],
+    "author": "DanyZurita",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/DanyZurita/RicksyBusinessJS/issues"
+    },
+    "homepage": "https://github.com/DanyZurita/RicksyBusinessJS#readme",
     "devDependencies": {
         "jest": "^26.6.3"
     },
     "scripts": {
         "test": "jest"
-      }
+    }
 }
-
