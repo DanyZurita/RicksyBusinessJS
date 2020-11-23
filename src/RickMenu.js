@@ -8,7 +8,7 @@ function RickyMenu() {
 RickyMenu.prototype.dispatch = function (owner) {
     if (this.stock > 0 && owner.isPayable(this.cost)) {
         owner.pay(this.cost)
-        this.cost -= 1;
+        this.stock -= 1;
     }
 }
 
