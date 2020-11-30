@@ -1,5 +1,5 @@
-const CreditCard = require('../src/CreditCard.js');
-const RickMenu = require('../src/RickMenu.js');
+const CreditCard = require('../../CreditCard/CreditCard.js');
+const RickMenu = require('../RickMenu.js');
 
 beforeEach(() => {
     danyCredit = new CreditCard("Dany", 123);

@@ -1,5 +1,5 @@
-const CreditCard = require('../src/CreditCard.js');
-const CrystalExpender = require('../src/CrystalExpender.js');
+const CreditCard = require('../../CreditCard/CreditCard.js');
+const CrystalExpender = require('../CrystalExpender.js');
 
 beforeEach(() => {
     danyCredit = new CreditCard("Dany", 123);
