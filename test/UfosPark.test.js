@@ -9,7 +9,7 @@ beforeEach(() => {
 
 test('Singleton UfosPark', () => {
     let ufosPark2 = singletonUfosPark.getUfo();
-    expect(ufosPark).toMatchObject(ufosPark2);
+    expect(ufosPark === ufosPark2).toBe(true);
 });
 
 test('Add 3 new Ufo', () => {
