@@ -17,3 +17,10 @@ test('Pay only 10 Crsytal', () => {
     }
     expect(danyCredit.credit).toBe(2500);
 });
+
+test('Cant pay a crystal', () => {
+    danyCredit.pay(3000);
+    expect(danyCredit.credit).toBe(0);
+    crystal.dispatch(danyCredit);
+    expect(danyCredit.credit).toBe(0);
+});

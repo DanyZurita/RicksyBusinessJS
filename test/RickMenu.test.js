@@ -17,3 +17,10 @@ test('Pay only 100 menus', () => {
     }
     expect(danyCredit.credit).toBe(2000);
 });
+
+test('Cant pay a menu', () => {
+    danyCredit.pay(3000);
+    expect(danyCredit.credit).toBe(0);
+    menu.dispatch(danyCredit);
+    expect(danyCredit.credit).toBe(0);
+});
