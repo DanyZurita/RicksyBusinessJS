@@ -1,4 +1,3 @@
-
 //Constructor
 function UfosPark() {
 
@@ -18,14 +17,14 @@ UfosPark.prototype.getUfoOf = function(owner) {
         if (owner == v) {
             return k;
         }
-      }
+    }
     return "nope";
 }
 
 //Main process to dispatch a Ufo
 UfosPark.prototype.dispatch = function(creditCard) {
     for (let [k, v] of this.fleet.entries()) {
-        if(this.isUfoDispacheable(v, creditCard)) {
+        if (this.isUfoDispacheable(v, creditCard)) {
             this.payDispatch(k, creditCard);
             break;
         }
@@ -51,19 +50,20 @@ UfosPark.prototype.isOwnerAlreadyServed = function(creditCard) {
 //Singleton Pattern
 
 
-const singletonUfosPark = (function () {
-        var ufosParkInstance;
-        function createInstance() {
-            return new UfosPark()
-        }
-        return {
-          getUfo: function() {
+const singletonUfosPark = (function() {
+    let ufosParkInstance;
+
+    function createInstance() {
+        return new UfosPark()
+    }
+    return {
+        getUfo: function() {
             if (!ufosParkInstance) {
                 ufosParkInstance = createInstance();
             }
             return ufosParkInstance;
-          },
-        };
-      })();
+        },
+    };
+})();
 
 module.exports = singletonUfosPark;
