@@ -1,4 +1,3 @@
-
 function CrystalExpender(stock, cost) {
 
     this.stock = stock;
@@ -6,11 +5,27 @@ function CrystalExpender(stock, cost) {
 
 }
 
-CrystalExpender.prototype.dispatch = function (owner) {
+CrystalExpender.prototype.dispatch = function(owner) {
     if (this.stock > 0 && owner.isPayable(this.cost)) {
         owner.pay(this.cost)
         this.stock -= 1;
     }
 }
 
-module.exports = CrystalExpender;
+const singletonCrystal = (function() {
+    let crystalInstance;
+
+    function createInstance(stock, cost) {
+        return new CrystalExpender(stock, cost)
+    }
+    return {
+        getCrystal: function(stock, cost) {
+            if (!crystalInstance) {
+                crystalInstance = createInstance(stock, cost);
+            }
+            return crystalInstance;
+        },
+    };
+})();
+
+module.exports = singletonCrystal;
