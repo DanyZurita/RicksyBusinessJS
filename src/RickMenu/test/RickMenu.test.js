@@ -1,9 +1,9 @@
 const CreditCard = require('../../CreditCard/CreditCard.js');
-const RickMenu = require('../RickMenu.js');
+const singletonMenu = require('../RickMenu.js');
 
 beforeEach(() => {
     danyCredit = new CreditCard("Dany", 123);
-    menu = new RickMenu();
+    menu = singletonMenu.getMenu();
 });
 
 test('Pay 1 Menu', () => {
@@ -11,11 +11,11 @@ test('Pay 1 Menu', () => {
     expect(danyCredit.credit).toBe(2990);
 });
 
-test('Pay only 100 menus', () => {
+test('Pay only 99 menus', () => {
     for (let i = 0; i < 101; i++) {
         menu.dispatch(danyCredit);
     }
-    expect(danyCredit.credit).toBe(2000);
+    expect(danyCredit.credit).toBe(2010);
 });
 
 test('Cant pay a menu', () => {
