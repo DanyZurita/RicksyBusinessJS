@@ -1,10 +1,11 @@
 {
-    "name": "ricksybusinessjs",
-    "description": "RicksyBusiness en JavaScript",
+    "name": "ricksybusiness",
     "version": "1.0.0",
+    "description": "RicksyBusiness module",
     "main": "RicksyBusiness.js",
-    "directories": {
-        "test": "test"
+    "scripts": {
+        "test": "main",
+        "start": "node RicksyBusiness"
     },
     "repository": {
         "type": "git",
@@ -18,11 +19,5 @@
     "bugs": {
         "url": "https://github.com/DanyZurita/RicksyBusinessJS/issues"
     },
-    "homepage": "https://github.com/DanyZurita/RicksyBusinessJS#readme",
-    "devDependencies": {
-        "jest": "^26.6.3"
-    },
-    "scripts": {
-        "test": "jest"
-    }
+    "homepage": "https://github.com/DanyZurita/RicksyBusinessJS#readme"
 }

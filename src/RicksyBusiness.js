@@ -23,7 +23,7 @@
  * en la tarjeta del invitado/a el coste de ambos servicios. 
  */
 
- /*
+/*
 function main() {
 
     var creditCards = [
@@ -196,10 +196,10 @@ function main() {
 main();
 
 */
-const CreditCard = require('./CreditCard.js');
-const singletonUfosPark = require('./UfosPark.js');
-const CrystalExpender = require('./CrystalExpender.js');
-const RickMenu = require('./RickMenu.js');
+const CreditCard = require('./CreditCard/CreditCard.js');
+const singletonUfosPark = require('./UfosPark/UfosPark.js');
+const CrystalExpender = require('./CrystalExpender/CrystalExpender.js');
+const RickMenu = require('./RickMenu/RickMenu.js');
 
 let danyCredit = new CreditCard("Dany", 123);
 let mateuCredit = new CreditCard("Mateu", 1);

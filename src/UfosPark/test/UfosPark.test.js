@@ -1,5 +1,5 @@
-const singletonUfosPark = require('../src/UfosPark.js');
-const CreditCard = require('../src/CreditCard.js');
+const singletonUfosPark = require('../UfosPark.js');
+const CreditCard = require('../../CreditCard/CreditCard.js');
 
 beforeEach(() => {
     danyCredit = new CreditCard("Dany", 123);
