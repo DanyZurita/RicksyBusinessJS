@@ -1,21 +1,21 @@
 const CreditCard = require('../../CreditCard/CreditCard.js');
-const CrystalExpender = require('../CrystalExpender.js');
+const singletonCrystal = require('../CrystalExpender.js');
 
 beforeEach(() => {
     danyCredit = new CreditCard("Dany", 123);
-    crystal = new CrystalExpender(10, 50);
+    crystal = singletonCrystal.getCrystal(10, 50);
 });
 
-test('Pay 1 Crsytal', () => {
+test('Pay 1 Crysfix()tal', () => {
     crystal.dispatch(danyCredit);
     expect(danyCredit.credit).toBe(2950);
 });
 
-test('Pay only 10 Crsytal', () => {
+test('Pay only 9 Crystal', () => {
     for (let i = 0; i < 20; i++) {
         crystal.dispatch(danyCredit);
     }
-    expect(danyCredit.credit).toBe(2500);
+    expect(danyCredit.credit).toBe(2550);
 });
 
 test('Cant pay a crystal', () => {
