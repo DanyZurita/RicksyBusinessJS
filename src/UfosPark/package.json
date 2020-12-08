@@ -1,0 +1,25 @@
+{
+  "name": "ufospark",
+  "version": "1.0.0",
+  "description": "UfosPark module",
+  "main": "UfosPark.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanyZurita/RicksyBusinessJS.git"
+  },
+  "keywords": [
+    "JS"
+  ],
+  "author": "DanyZurita",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanyZurita/RicksyBusinessJS/issues"
+  },
+  "homepage": "https://github.com/DanyZurita/RicksyBusinessJS#readme"
+}
