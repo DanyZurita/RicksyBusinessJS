@@ -1,0 +1,140 @@
+[{
+        "_id": "5fbf9b446e764ef42a0df4a4",
+        "name": "Ufer Gold",
+        "description": "Ufer Gold offers the most luxury experience in the entire galaxy. Includes all the features and amenities you can imagine.",
+        "driver": "Autopilot",
+        "passengers": 1,
+        "privacy": "Private",
+        "seats": "King Size",
+        "propulsion": "Photon Engine",
+        "top_speed": 1080000000,
+        "price": 120,
+        "amenities": [
+            "WiFi",
+            "Bluetooth",
+            "Tinted Screens",
+            "HiFi Audio System",
+            "A/C",
+            "Champagne Bottle",
+            "Water",
+            "Snacks"
+        ]
+    },
+    {
+        "_id": "5fbf9b456e764ef42a0df4a6",
+        "name": "Ufer Bus",
+        "description": "Ufer Bus offers a private transportation service for a multitude of living beings, this service offers a UFO with space for a comfortable and appetizing trip, you can enjoy a comfortable, fast, and pleasant service surrounded by your friends or family.",
+        "driver": "Alien Chofer",
+        "passengers": 24,
+        "privacy": "Private",
+        "seats": "Comfortable seats",
+        "propulsion": "Electric",
+        "top_speed": 800,
+        "price": 200,
+        "amenities": [
+            "WiFi",
+            "Water",
+            "Snacks",
+            "Beer",
+            "TV"
+        ]
+    },
+    {
+        "_id": "5fbf9b466e764ef42a0df4a8",
+        "name": "Ufer Space",
+        "description": "Ufer Space is the transport service for situations that require extra space, useful for transporting belongings or for families.",
+        "driver": "Alien Chofer",
+        "passengers": 8,
+        "privacy": "Private",
+        "seats": "Comfortable seats",
+        "propulsion": "Electric",
+        "top_speed": 600,
+        "price": 50,
+        "amenities": [
+            "WiFi",
+            "Water"
+        ]
+    },
+    {
+        "_id": "5fbf9b476e764ef42a0df4aa",
+        "name": "Ufer Business",
+        "description": "Ufer Business is the current best UFO service in terms of quality, it is a top-of-the-range service, this service has all the extra qualities and comforts that a living being could need.",
+        "driver": "Alien Chofer",
+        "passengers": 4,
+        "privacy": "Private",
+        "seats": "Extra comfortable seats",
+        "propulsion": "Fusion reactor",
+        "top_speed": "150.000",
+        "price": 80,
+        "amenities": [
+            "WiFi",
+            "Wine",
+            "HiFi Audio System",
+            "Mask"
+        ]
+    },
+    {
+        "_id": "5fbf9b496e764ef42a0df4ac",
+        "name": "Ufer Daily+",
+        "description": "Ufer Daily+ offers a low-cost service for daily transport situations, you will share space with other living beings in exchange for an economic cost, unlike Ufer Daily, this Ufer Daily+ service offers an extra quality in the transport service.",
+        "driver": "Alienormal",
+        "passengers": 6,
+        "privacy": "Private",
+        "seats": "Comfortable seats",
+        "propulsion": "Hybrid",
+        "top_speed": 1200,
+        "price": 40,
+        "amenities": [
+            "WiFi",
+            "Water",
+            "Mask",
+            "Snack"
+        ]
+    },
+    {
+        "_id": "5fbf9b4a6e764ef42a0df4ae",
+        "name": "Ufer Life",
+        "description": "Ufer Life offers a low cost service for transport situations in the city, you will share space with other living beings in exchange for a cost, the service runs through a line of stops, instead of going to the different destinations of each client.",
+        "driver": "Alienormal",
+        "passengers": 10,
+        "privacy": "Public",
+        "seats": "Economic seats",
+        "propulsion": "Thermal",
+        "top_speed": 600,
+        "price": 15,
+        "amenities": [
+            "Mask"
+        ]
+    },
+    {
+        "_id": "5fbf9b4b6e764ef42a0df4b0",
+        "name": "Ufer Daily",
+        "description": "Ufer Daily offers a low cost service for daily transport situations, you will share space with other living beings in exchange for a cheap cost",
+        "driver": "Alienormal",
+        "passengers": 4,
+        "privacy": "Membership",
+        "seats": "Common seats",
+        "propulsion": "Electric",
+        "top_speed": 10000,
+        "price": 30,
+        "amenities": [
+            "WiFi",
+            "Mask"
+        ]
+    },
+    {
+        "_id": "5fbf9b4c6e764ef42a0df4b2",
+        "name": "Ufer Lite",
+        "description": "Ufer lite offers an affordable transportation service for everyone at any time and in any situation.",
+        "driver": "Alienormal",
+        "passengers": 2,
+        "privacy": "Public",
+        "seats": "Common seats",
+        "propulsion": "Thermal",
+        "top_speed": 10000,
+        "price": 40,
+        "amenities": [
+            "WiFi"
+        ]
+    }
+]
