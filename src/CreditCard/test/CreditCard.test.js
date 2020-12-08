@@ -1,4 +1,4 @@
-const CreditCard = require('../src/CreditCard.js');
+const CreditCard = require('../CreditCard.js');
 
 beforeEach(() => {
     danyCredit = new CreditCard("Dany", 123);
