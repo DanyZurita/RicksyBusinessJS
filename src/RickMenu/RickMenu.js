@@ -1,7 +1,7 @@
-function RickMenu() {
+function RickMenu(stock, cost) {
 
-    this.stock = 100;
-    this.cost = 10;
+    this.stock = stock || 100;
+    this.cost = cost || 10;
 
 }
 
@@ -15,13 +15,13 @@ RickMenu.prototype.dispatch = function(owner) {
 const singletonMenu = (function() {
     let menuInstance;
 
-    function createInstance() {
-        return new RickMenu()
+    function createInstance(stock, cost) {
+        return new RickMenu(stock, cost)
     }
     return {
-        getMenu: function() {
+        getMenu: function(stock, cost) {
             if (!menuInstance) {
-                menuInstance = createInstance();
+                menuInstance = createInstance(stock, cost);
             }
             return menuInstance;
         },
