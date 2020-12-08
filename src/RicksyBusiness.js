@@ -198,8 +198,11 @@ main();
 */
 const CreditCard = require('./CreditCard/CreditCard.js');
 const singletonUfosPark = require('./UfosPark/UfosPark.js');
-const CrystalExpender = require('./CrystalExpender/CrystalExpender.js');
-const RickMenu = require('./RickMenu/RickMenu.js');
+const singletonCrystal = require('./CrystalExpender/CrystalExpender.js');
+const singletonMenu = require('./RickMenu/RickMenu.js');
+const uferData = require('./data/uferService.json')
+const crystalData = require('./data/crystalService.json')
+const menusData = require('./data/menusService.json')
 
 let danyCredit = new CreditCard("Dany", 123);
 let mateuCredit = new CreditCard("Mateu", 1);
@@ -220,9 +223,10 @@ console.log(mateuCredit);
 
 let ufosPark = singletonUfosPark.getUfo();
 
-ufosPark.addUfo("Ufo1");
-ufosPark.addUfo("Ufo2");
-ufosPark.addUfo("Ufo3");
+let ufos = uferData;
+for (let ufo of ufos) {
+    ufosPark.addUfo(ufo);
+}
 
 
 console.log(ufosPark);
@@ -248,7 +252,9 @@ let ufoMM = ufosPark.getUfoOf(mateuCredit.number);
 console.log(ufoMM)
 console.log(mateuCredit);
 
-let crystal = new CrystalExpender(10, 50);
+let crystalStock = parseInt(crystalData[0].stock);
+let crystalPrice = parseInt(crystalData[0].precio);
+let crystal = singletonCrystal.getCrystal(crystalStock, crystalPrice);
 
 console.log(danyCredit);
 
@@ -256,7 +262,9 @@ crystal.dispatch(danyCredit);
 
 console.log(danyCredit);
 
-let rickMenu = new RickMenu();
+let menuStock = parseInt(menusData.China.menu1.stock);
+let menuPrice = parseInt(menusData.China.menu1.price);
+let rickMenu = singletonMenu.getMenu(menuStock, menuPrice);
 
 
 console.log(danyCredit);
