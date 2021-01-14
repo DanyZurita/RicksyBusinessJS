@@ -15,7 +15,7 @@ UfosPark.prototype.addUfo = function(ufo) {
 UfosPark.prototype.getUfoOf = function(owner) {
     for (let [k, v] of this.fleet.entries()) {
         if (owner == v) {
-            return k;
+            return k.name;
         }
     }
     return "nope";
@@ -45,6 +45,11 @@ UfosPark.prototype.payDispatch = function(k, creditCard) {
 //Check if owner already is dispatched
 UfosPark.prototype.isOwnerAlreadyServed = function(creditCard) {
     return Array.from(this.fleet.values()).includes(creditCard.number, 0);
+}
+
+// ToString
+UfosPark.prototype.toString = function() {
+    console.log(`Fleet:  ${this.fleet.forEach(k,v => k.name.concat(" " + v))} \nFee: ${this.fee} EZI\n`);
 }
 
 //Singleton Pattern

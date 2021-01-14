@@ -28,4 +28,9 @@ const singletonReceptivo = (function() {
     };
 })();
 
+// ToString
+Receptive.prototype.toString = function() {
+    console.log(`Services:  ${this.observers}`);
+}
+
 module.exports = singletonReceptivo;

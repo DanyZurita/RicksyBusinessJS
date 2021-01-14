@@ -28,4 +28,9 @@ const singletonCrystal = (function() {
     };
 })();
 
+// ToString
+CrystalExpender.prototype.toString = function() {
+    console.log(`Stock:  ${this.stock} \nCost: ${this.cost} EZI\n`);
+}
+
 module.exports = singletonCrystal;

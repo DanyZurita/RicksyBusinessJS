@@ -1,4 +1,3 @@
-
 function CreditCard(owner, number) {
 
     this.owner = owner;
@@ -7,15 +6,21 @@ function CreditCard(owner, number) {
 
 }
 
+// Pay the amount
 CreditCard.prototype.pay = function(fee) {
     if (this.isPayable(fee)) {
         this.credit -= fee;
     }
 }
 
+// Conditions to pay
 CreditCard.prototype.isPayable = function(fee) {
     return this.credit > 0 && this.credit >= fee;
 }
 
+// ToString
+CreditCard.prototype.toString = function() {
+    console.log(`Owner:  ${this.owner} \nNumber: ${this.number} \nCredit: ${this.credit} EZI\n`);
+}
 
 module.exports = CreditCard;

@@ -28,4 +28,9 @@ const singletonMenu = (function() {
     };
 })();
 
+// ToString
+RickMenu.prototype.toString = function() {
+    console.log(`Stock:  ${this.stock} \nCost: ${this.cost} EZI\n`);
+}
+
 module.exports = singletonMenu;
