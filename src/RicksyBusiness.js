@@ -186,7 +186,7 @@ function main() {
 }
 
 function mostrarReserva(card, expender, ufos) {
-    console.log(`\nCredit: \n${card.toString()} \nPacks: ${expender.stock} \nOvni: ${ufos.getUfoOf(card.number)}`);
+    console.log(`\nCredit: \n${card} \nPacks: ${expender.stock} \nOvni: ${ufos.getUfoOf(card.number)}`);
 }
 
 main();
